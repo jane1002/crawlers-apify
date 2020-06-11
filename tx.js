@@ -30,7 +30,6 @@ Apify.main(async () => {
         url: `${baseUrl}/Search/Search?${qs}`
     });
 
-    // console.log(`${baseUrl}/Search/Search?${qs}`);
 
     const handlePageFunction =  async ({ request, response, body, contentType, $ }) => {
         const links = [];
@@ -59,7 +58,7 @@ Apify.main(async () => {
                 docketInfo.description = description;
                 // console.log(docketNum, filings, utility, description);
                 console.log(JSON.stringify(docketInfo))
-                exportJsonObjToCSV(docketInfo, 'docket.csv');
+                exportJsonObjToCSV(docketInfo, 'dockets.csv');
             }
 
            // if(index != 0 && index < lastIndex - 1) {
@@ -93,11 +92,6 @@ Apify.main(async () => {
         //     requestQueue,
         //     baseUrl: request.loadedUrl,
         //     pseudoUrls: ['http[s?]://apify.com/[.+]/[.+]'],
-        // });
-
-        // Save the data to dataset.
-        // await Apify.pushData({
-        //     docketInfo
         // });
 
     };
