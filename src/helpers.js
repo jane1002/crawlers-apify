@@ -19,3 +19,10 @@ exports.exportJsonObjToCSV = (data,  outputFile) => {
     }
 };
 
+exports.formatDocketNum = (docketNum) => {
+    if(docketNum) {
+        const pattern = /[0-9]*$/;
+        return pattern.exec(docketNum)[0];
+    } else
+        return docketNum;
+};

@@ -9,7 +9,7 @@
 	},
 	"devDependencies": {},
 	"scripts": {
-		"start": "node src/tx.js",
+		"start": "node src/fl.js",
 		"test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
 	},
 	"author": "It's not you it's me",
