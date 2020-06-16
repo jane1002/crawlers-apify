@@ -24,7 +24,7 @@ language for rich formatting.
     - middlewares
     - item(model)
     - setting
-- good:
+- Pros:
     - configurable. 
     - additional packages built on it, extend the functionality, like scrapy-splash, scrapy-fake-user-agent.
     - good support for feeds export, has some pre-defined pipelines, such as filePipeline, imagePipeline.
@@ -33,7 +33,7 @@ language for rich formatting.
     - plenty Q/A on stackoverflow
     - Scrapy shell is an interactive shell where you can try and debug your scraping code very quickly, without having to run the spider
     - fast 
-- bad: 
+- Cons: 
     - doesn't support JS dynamic loading page.(possible workaround: write a middleware), 
         - work with selenium [example](https://cloud.tencent.com/developer/article/1467534)
     - for cloud, currently only supports AWS S3, need to write your own pipeline for Azure.
@@ -41,28 +41,35 @@ language for rich formatting.
 # Selenium
 - python
 - Selector: beautiful soup
-- JS dynamic load, simulate human action on the page. 
-- bad: slow.
+- Pros:
+    - Selenium supports many languages and different browsers
+    - Selenium can be used to scrape AJAX websites and the most difficult websites to scrape
+- Cons: 
+    - slow.
 - compared with Puppeteer, not recommend.
 
 # Puppeteer
 - nodeJS
 - Selector: documentQuery, easy to get the path, copy from page.
-- good:
+- Pros:
     - web automated testing framework, you can open a browser to see the actual scraping process.
     - pagination: 
     - easily open new tab
-- bad: 
+    - Fast compared to Selenium
+    - well documented, support by Google team.
+- Cons: 
     - loading a browser, so it is memory expensive.
     - time sleep before get the new page loaded.
+    - supports only Javascript(Node)
+    - supports only Chrome
 
 # Apify
 - nodeJS
 - Selector: cheerio for cheerio crawler, puppeteer.
-- good:
+- Pros:
     - supports both static / dynamic loading page, construct API call or headless browser.
     - multiple features: 
-- bad:
+- Cons:
     - write your own export module to save data.
     - has some redundant folders for apify platform use. 
     - poor documentation, lack of Q/A on stackoverflow. 
